@@ -1,0 +1,186 @@
+*{
+    
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --muted-blue: hsl(224, 23%, 55%);
+  --panel-blue: hsl(225, 100%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--pale-blue);
+  background-image: url("./assets/images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: var(--dark-blue);
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.summary-card {
+  width: 100%;
+  max-width: 28rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 1.5rem 3rem rgba(56, 42, 225, 0.12);
+}
+
+.summary-card > img {
+  display: block;
+  width: 100%;
+  height: 13.75rem;
+  object-fit: cover;
+}
+
+.summary-content {
+  padding: 2.5rem 3rem 3rem;
+  text-align: center;
+}
+
+.summary-content h1 {
+  margin: 0 0 1rem;
+  color: var(--dark-blue);
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+
+.summary-content > p {
+  margin: 0;
+  color: var(--muted-blue);
+  line-height: 1.6;
+}
+
+.plan-box {
+  width: 100%;
+  min-height:80px ;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0 2rem;
+  padding: 8px 20px;
+  border-radius: 12px;
+  background: hsl(225, 100%, 98%);
+}
+
+.plan-info {
+  background-color: hsl(225, 100%, 98%);;
+  border-radius: 12px;
+  padding:16px 20px ;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.plan-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.plan-details p {
+  margin: 0;
+}
+
+.plan-details p:first-child {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.plan-details p:last-child {
+  margin-top: 0.25rem;
+  color: var(--muted-blue);
+}
+
+.change-link {
+  color:  hsl(245, 75%, 52%);
+  font-weight: 700;
+}
+
+.change-link:hover {
+  color: hsl(245, 83%, 68%);
+  text-decoration: none;
+}
+
+.payment-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: hsl(245, 75%, 52%) ;
+  color: hsl(225, 100%, 98%);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.payment-button:hover {
+  background: hsl(245, 83%, 68%);
+}
+
+.cancel-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--muted-blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cancel-link:hover {
+  color: var(--dark-blue);
+}
+
+.change-link:focus-visible,
+.payment-button:focus-visible,
+.cancel-link:focus-visible {
+  outline: 3px solid var(--dark-blue);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image: url("./assets/images/pattern-background-mobile.svg");
+  }
+
+  .summary-card > img {
+    height: 10rem;
+  }
+
+  .summary-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .summary-content h1 {
+    font-size: 1.5rem;
+  }
+.cancel-link {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  color: hsl(224, 23%, 55%);
+  font-size: 0.875rem;
+  font-weight: 200;
+  text-decoration: none;
+}
